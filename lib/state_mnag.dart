@@ -9,12 +9,14 @@ class StateClass extends StatefulWidget {
 
 class _StateClassState extends State<StateClass> {
 // consts--- constant------> no change
+  // Global Variables
   int result = 0;
   int add = 0;
   int sub = 0;
   double mod = 0;
   int multi = 0;
   double div = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,25 +44,11 @@ class _StateClassState extends State<StateClass> {
                     color: Colors.black),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 28),
-              child: Container(
-                decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(10)),
-                child: TextFormField(
-                  style: TextStyle(color: Colors.white),
-                  decoration: InputDecoration(
-                      hintText: 'Enter your email',
-                      hintStyle: TextStyle(color: Colors.white),
-                      prefixIcon: Icon(Icons.mail)),
-                ),
-              ),
-            ),
             FloatingActionButton(
               onPressed: () {
+                // int=   String-- conversion
                 int n1 = 50;
-                int n2 = 6;
+                int n2 = 34;
                 add = n1 + n2;
                 setState(() {});
                 print('Add=$add');
@@ -79,8 +67,8 @@ class _StateClassState extends State<StateClass> {
             ),
             FloatingActionButton(
               onPressed: () {
-                int a = 10;
-                int b = 87;
+                int a = 87;
+                int b = 91;
                 sub = a - b;
                 setState(() {});
                 print('Subtraction=$sub');
