@@ -58,7 +58,7 @@ class _StateClassState extends State<TextForm> {
                     color: const Color.fromARGB(255, 16, 33, 46),
                     borderRadius: BorderRadius.circular(10)),
                 child: Padding(
-                  padding: const EdgeInsets.all(48.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: TextFormField(
                     controller: n1Controller,
                     style: TextStyle(color: Colors.white),
