@@ -52,7 +52,7 @@ class _StateClassState extends State<TextForm> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 28, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 48, vertical: 20),
               child: Container(
                 decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 16, 33, 46),
