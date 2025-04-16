@@ -55,7 +55,7 @@ class _StateClassState extends State<TextForm> {
               padding: EdgeInsets.symmetric(horizontal: 28, vertical: 10),
               child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: const Color.fromARGB(255, 16, 33, 46),
                     borderRadius: BorderRadius.circular(10)),
                 child: TextFormField(
                   controller: n1Controller,
@@ -72,7 +72,7 @@ class _StateClassState extends State<TextForm> {
               padding: EdgeInsets.symmetric(horizontal: 28),
               child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: const Color.fromARGB(255, 4, 28, 46),
                     borderRadius: BorderRadius.circular(10)),
                 child: TextFormField(
                   controller: n2Conroller,
