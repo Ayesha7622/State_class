@@ -74,13 +74,18 @@ class _StateClassState extends State<TextForm> {
                 decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 4, 28, 46),
                     borderRadius: BorderRadius.circular(10)),
-                child: TextFormField(
-                  controller: n2Conroller,
-                  style: TextStyle(color: Colors.white),
-                  decoration: InputDecoration(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextFormField(
+                    controller: n2Conroller,
+                    style: TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
                       hintText: 'Enter 2nd number',
                       hintStyle: TextStyle(color: Colors.white),
-                      prefixIcon: Icon(Icons.mail)),
+                      //
+                      //prefixIcon: Icon(Icons.mail)),
+                    ),
+                  ),
                 ),
               ),
             ),
