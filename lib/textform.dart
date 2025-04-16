@@ -61,9 +61,10 @@ class _StateClassState extends State<TextForm> {
                   controller: n1Controller,
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                      hintText: 'Enter 1st number',
-                      hintStyle: TextStyle(color: Colors.white),
-                      prefixIcon: Icon(Icons.mail)),
+                    hintText: 'Enter 1st number',
+                    hintStyle: TextStyle(color: Colors.white),
+                    //prefixIcon: Icon(Icons.mail)),
+                  ),
                 ),
               ),
             ),
