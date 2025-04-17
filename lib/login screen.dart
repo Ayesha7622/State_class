@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:state_class/navi.dart';
 import 'package:state_class/state_mnag.dart';
 
 class Login extends StatefulWidget {
@@ -11,6 +12,8 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  // relational operators----
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,14 +32,14 @@ class _LoginState extends State<Login> {
         ),
       ),
       body: Column(children: [
-        Center(
-          child: FloatingActionButton(
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Login()));
-            },
-          ),
-        ),
+        // Center(
+        //   child: FloatingActionButton(
+        //     onPressed: () {
+        //       Navigator.push(
+        //           context, MaterialPageRoute(builder: (context) => Login()));
+        //     },
+        //   ),
+        // ),
         SizedBox(
           height: 40,
         ),
@@ -84,6 +87,25 @@ class _LoginState extends State<Login> {
         ),
         FloatingActionButton(
           onPressed: () {
+            String email = emailController.text;
+            String password = passwordController.text;
+            if (email == "abc@gmail.com") // outer if--true
+            {
+              if (password == "112233") // inner if--true
+              {
+                // welcome
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => navigation()));
+              } else {
+                print('Wrong password');
+              }
+            } else {
+              print('wrong email');
+            }
+            // if, if else, if else if, nested if else, switch
+            // Navigator.push(
+            //     context, MaterialPageRoute(builder: (context) => navigation()));
+
             Text(
               'Login',
             );

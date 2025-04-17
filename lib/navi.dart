@@ -6,7 +6,7 @@ class navigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple,
+      backgroundColor: const Color.fromARGB(255, 209, 188, 245),
       appBar: AppBar(
         title: Text(
           'Login',

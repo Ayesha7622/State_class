@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:state_class/login%20screen.dart';
+import 'package:state_class/navi.dart';
 import 'package:state_class/state_mnag.dart';
 import 'package:state_class/textform.dart';
 
@@ -17,9 +18,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
 
         //home: StateClass()
-        home: TextForm()
-        //home: Login()
-        );
+        //home: TextForm()
+        //home: navigation()
+        home: Login());
   }
 }
 
