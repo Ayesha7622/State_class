@@ -10,7 +10,7 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   TextEditingController emailController = TextEditingController();
-  TextEditingController passwordConroller = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +41,7 @@ class _LoginState extends State<Login> {
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
                 controller: emailController,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: const Color.fromARGB(255, 96, 84, 84)),
                 decoration: InputDecoration(
                   icon: Icon(Icons.email),
                   hintText: "Enter Email:",
@@ -63,7 +63,7 @@ class _LoginState extends State<Login> {
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
                 controller: passwordController,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: const Color.fromARGB(255, 105, 94, 94)),
                 decoration: InputDecoration(
                   icon: Icon(Icons.password),
                   hintText: "Enter Password:",

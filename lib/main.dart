@@ -17,8 +17,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
 
         //home: StateClass()
-        //home: TextForm()
-        home: Login());
+        home: TextForm()
+        //home: Login()
+        );
   }
 }
 
