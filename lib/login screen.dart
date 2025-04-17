@@ -29,6 +29,14 @@ class _LoginState extends State<Login> {
         ),
       ),
       body: Column(children: [
+        Center(
+          child: FloatingActionButton(
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Login()));
+            },
+          ),
+        ),
         SizedBox(
           height: 40,
         ),
