@@ -52,7 +52,7 @@ class _StateClassState extends State<TextForm> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 48, vertical: 30),
+              padding: EdgeInsets.symmetric(horizontal: 98, vertical: 30),
               child: Container(
                 decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 16, 33, 46),
@@ -60,7 +60,7 @@ class _StateClassState extends State<TextForm> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
-                    controller: n1Controller,
+                    controller: n1Controller, //initializing value
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                       hintText: 'Enter 1st number',
@@ -72,7 +72,7 @@ class _StateClassState extends State<TextForm> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 28),
+              padding: EdgeInsets.symmetric(horizontal: 98),
               child: Container(
                 decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 4, 28, 46),
@@ -92,120 +92,152 @@ class _StateClassState extends State<TextForm> {
                 ),
               ),
             ),
-            FloatingActionButton(
-              onPressed: () {
-                // int=   String-- conversion
-                int a = int.parse(n1Controller.text);
-                int b = int.parse(n2Conroller.text);
-                add = a + b;
-                setState(() {});
-                print('Add=$add');
-              },
-              child: Icon(Icons.add),
-            ),
-            Text(
-              "Addition=$add",
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
             SizedBox(
-              height: 18,
+              height: 20,
             ),
-            FloatingActionButton(
-              onPressed: () {
-                int a = int.parse(n1Controller.text);
-                int b = int.parse(n2Conroller.text);
-                sub = a - b;
-                setState(() {});
-                print('Subtraction=$sub');
-              },
-              child: Icon(
-                Icons.remove,
-                color: Colors.white,
-              ),
-              backgroundColor: Colors.purple,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      // int=   String-- conversion
+                      int a = int.parse(n1Controller.text);
+                      int b = int.parse(n2Conroller.text);
+                      add = a + b;
+                      setState(() {});
+                      print('Add=$add');
+                    },
+                    child: Icon(Icons.add),
+                  ),
+                ),
+                SizedBox(
+                  height: 18,
+                ),
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: FloatingActionButton(
+                        onPressed: () {
+                          int a = int.parse(n1Controller.text);
+                          int b = int.parse(n2Conroller.text);
+                          sub = a - b;
+                          setState(() {});
+                          print('Subtraction=$sub');
+                        },
+                        child: Icon(
+                          Icons.remove,
+                          color: Colors.white,
+                        ),
+                        backgroundColor: Colors.purple,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 18,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      double n = 56;
+                      double m = 21;
+                      mod = n % m;
+                      setState(() {});
+                      print('Modulas$mod');
+                    },
+                    child: Icon(
+                      Icons.percent,
+                      color: Colors.white,
+                    ),
+                    backgroundColor: Colors.blueGrey,
+                  ),
+                ),
+                SizedBox(
+                  height: 18,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      int y = 63;
+                      int z = 29;
+                      multi = y * z;
+                      setState(() {});
+                      print('Product=$multi');
+                    },
+                    child: Text(
+                      '*',
+                      style: TextStyle(fontSize: 30, color: Colors.white),
+                    ),
+                    backgroundColor: const Color.fromARGB(255, 6, 57, 78),
+                  ),
+                ),
+                SizedBox(
+                  height: 18,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      double y = 63;
+                      double z = 29;
+                      div = y / z;
+                      setState(() {});
+                      print('Division=$div');
+                    },
+                    child: Text(
+                      '/',
+                      style: TextStyle(fontSize: 30, color: Colors.white),
+                    ),
+                    backgroundColor: const Color.fromARGB(255, 47, 84, 4),
+                  ),
+                ),
+              ],
             ),
-            Text(
-              'Substarction=$sub',
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            SizedBox(
-              height: 18,
-            ),
-            FloatingActionButton(
-              onPressed: () {
-                double n = 56;
-                double m = 21;
-                mod = n % m;
-                setState(() {});
-                print('Modulas$mod');
-              },
-              child: Icon(
-                Icons.percent,
-                color: Colors.white,
-              ),
-              backgroundColor: Colors.blueGrey,
-            ),
-            Text(
-              'Modulas=$mod',
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            SizedBox(
-              height: 18,
-            ),
-            FloatingActionButton(
-              onPressed: () {
-                int y = 63;
-                int z = 29;
-                multi = y * z;
-                setState(() {});
-                print('Product=$multi');
-              },
-              child: Text(
-                '*',
-                style: TextStyle(fontSize: 30, color: Colors.white),
-              ),
-              backgroundColor: const Color.fromARGB(255, 6, 57, 78),
-            ),
-            Text(
-              'Product=$multi',
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            SizedBox(
-              height: 18,
-            ),
-            FloatingActionButton(
-              onPressed: () {
-                double y = 63;
-                double z = 29;
-                div = y / z;
-                setState(() {});
-                print('Division=$div');
-              },
-              child: Text(
-                '/',
-                style: TextStyle(fontSize: 30, color: Colors.white),
-              ),
-              backgroundColor: const Color.fromARGB(255, 47, 84, 4),
-            ),
-            Text(
-              'Division=$div',
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  "Add=$add",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                Text(
+                  'Sub=$sub',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                Text(
+                  'Mod=$mod',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                Text(
+                  'Multi=$multi',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                Text(
+                  'Div=$div',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ],
+            )
           ],
         ));
   }
